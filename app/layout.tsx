@@ -1,15 +1,26 @@
 // app/layout.tsx
+export const metadata = {
+  title: 'FitConverter.net - Stop Guessing Your Macros | Fitness & Nutrition Converter',
+  description:
+    'Convert cups to grams to calories instantly. The fastest way to measure protein powder, oats, rice, peanut butter, and more.',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Example: keep the ones you actually use */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        {/* ✅ Tailwind via CDN to match your current design instantly */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        />
+        {/* ✅ Font Awesome icons */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+        />
       </head>
-      <body>{children}</body>
+      <body className="bg-white text-gray-800">{children}</body>
     </html>
   );
 }
