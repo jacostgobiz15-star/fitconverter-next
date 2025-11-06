@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Gradient utilities matching reference design */
+.gradient-bg {
+  background: linear-gradient(135deg, #22c55e 0%, #3b82f6 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #22c55e 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effect from reference */
+.card-hover {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Navbar backdrop blur */
+.sticky-nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .sticky-nav {
+    background-color: rgba(15, 23, 42, 0.95);
+  }
+}
+
+.food-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.food-button:hover {
+  transform: scale(1.02);
+}
+
+.food-button.active {
+  background: linear-gradient(135deg, #22c55e 0%, #3b82f6 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.result-card {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .result-card {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  }
+}
+select optgroup,
+select option {
+  color: #111 !important;
+  font-weight: 500 !important;
+  background-color: #fff !important;
+}
+select optgroup {
+  font-weight: 700 !important;
+}
