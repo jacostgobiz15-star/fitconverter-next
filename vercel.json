@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/privacy-policy", "destination": "/" },
+    { "source": "/terms-of-service", "destination": "/" },
+    { "source": "/cookie-policy", "destination": "/" },
+    { "source": "/disclaimer", "destination": "/" },
+    { "source": "/contact", "destination": "/" }
+  ]
+}
